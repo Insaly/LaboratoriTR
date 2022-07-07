@@ -11,8 +11,14 @@ config_version=4
 [application]
 
 config/name="Experiments"
-run/main_scene="res://Sala3D.tscn"
+run/main_scene="res://Sales/Sala01.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/fullscreen=true
 
 [physics]
 
