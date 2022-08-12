@@ -23,3 +23,10 @@ func change_dir():
 
 func _on_Moviment_timeout():
 	change_dir()
+
+func _on_Area2D_area_entered(area):
+	if area.is_in_group("Parets"):
+		if area.name == "ParetNord" or area.name == "ParetSud":
+			dir.y = (-dir.y)
+		if area.name == "ParetEst" or area.name == "ParetOest":
+			dir.x = (-dir.x)
