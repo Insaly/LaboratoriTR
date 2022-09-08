@@ -1,7 +1,7 @@
 extends Area2D
 
 const Slime = preload("res://Entitats/Slime.tscn")
-var nombre_entitats = 2
+var nombre_entitats = 3000
 var entitats_generades = 0
 
 #func _ready():
