@@ -1,11 +1,23 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Entitats/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Entitats/TileMap04.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Sala01.gd" type="Script" id=3]
+[ext_resource path="res://Entitats/TileMap01.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Entitats/TileMap02.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Entitats/TileMap03.tscn" type="PackedScene" id=6]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="Position2D" type="Position2D" parent="."]
+
+[node name="Node2D" parent="Position2D" instance=ExtResource( 4 )]
+
+[node name="Node2D2" parent="Position2D" instance=ExtResource( 5 )]
+
+[node name="Node2D3" parent="Position2D" instance=ExtResource( 6 )]
+
+[node name="Node2D4" parent="Position2D" instance=ExtResource( 2 )]
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
