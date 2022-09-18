@@ -11,6 +11,9 @@ func _ready():
 
 func _process(delta):
 	vel = move_and_slide(dir * speed, Vector2.UP)
+	if self.position.x > 300 or self.position.x < -300 or self.position.y > 300 or self.position.y < -300:
+		Global.no_renderitzat[str(self.name)] = position 
+		queue_free()
 
 func change_dir():
 	angle = rand_range(0, 2 * PI)
@@ -23,10 +26,3 @@ func change_dir():
 
 func _on_Moviment_timeout():
 	change_dir()
-
-func _on_Area2D_area_entered(area):
-	if area.is_in_group("Parets"):
-		if area.name == "ParetNord" or area.name == "ParetSud":
-			dir.y = (-dir.y)
-		if area.name == "ParetEst" or area.name == "ParetOest":
-			dir.x = (-dir.x)

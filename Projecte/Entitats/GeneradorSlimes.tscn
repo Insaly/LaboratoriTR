@@ -11,3 +11,7 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="Position2D" type="Position2D" parent="."]
+
+[node name="MovimentGlobal" type="Timer" parent="."]
+
+[connection signal="timeout" from="MovimentGlobal" to="." method="_on_MovimentGlobal_timeout"]

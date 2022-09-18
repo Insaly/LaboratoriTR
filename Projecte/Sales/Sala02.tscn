@@ -1,19 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Entitats/GeneradorSlimes.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/Fons.png" type="Texture" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 30, 540 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 30, 540 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 960, 30 )
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 960, 30 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -21,30 +9,6 @@ extents = Vector2( 960, 30 )
 position = Vector2( 960, 540 )
 scale = Vector2( 6, 6 )
 texture = ExtResource( 2 )
-
-[node name="ParetOest" type="Area2D" parent="." groups=["Parets"]]
-position = Vector2( -30, 540 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ParetOest" groups=["Parets"]]
-shape = SubResource( 1 )
-
-[node name="ParetEst" type="Area2D" parent="." groups=["Parets"]]
-position = Vector2( 1950, 540 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ParetEst" groups=["Parets"]]
-shape = SubResource( 2 )
-
-[node name="ParetNord" type="Area2D" parent="." groups=["Parets"]]
-position = Vector2( 960, -30 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ParetNord" groups=["Parets"]]
-shape = SubResource( 3 )
-
-[node name="ParetSud" type="Area2D" parent="." groups=["Parets"]]
-position = Vector2( 960, 1110 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ParetSud" groups=["Parets"]]
-shape = SubResource( 4 )
 
 [node name="GeneradorSlimes" parent="." instance=ExtResource( 1 )]
 position = Vector2( 975, 540 )
