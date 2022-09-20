@@ -1,7 +1,7 @@
 extends Node2D
 
-var altura := 3000
-var amplada := 3000
+var altura := 10
+var amplada := 10
 
 func _ready():
 	for x in amplada:
