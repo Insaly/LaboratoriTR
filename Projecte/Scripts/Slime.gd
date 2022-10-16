@@ -4,7 +4,6 @@ var vel = Vector2()
 var speed = 0
 var dir := Vector2.RIGHT
 var angle = 0
-var acabo_de_neixer = false
 
 func _ready():
 	randomize()
@@ -13,12 +12,8 @@ func _ready():
 func _process(delta):
 	vel = move_and_slide(dir * speed, Vector2.UP)
 	
-	if ((self.position.x > 300 or self.position.x < -300) or (self.position.y > 300 or self.position.y < -300)) and acabo_de_neixer:
-		Global.no_renderitzat[str(self.name)] = position 
-		queue_free()
-		
-	if (self.position.x > 1275 or self.position.x < 675 or self.position.y > 840 or self.position.y < 240) and !acabo_de_neixer:
-		Global.no_renderitzat[str(self.name)] = position 
+	if ((self.global_position.x < 775 or self.global_position.x > 1175) or (self.global_position.y < 340 or self.global_position.y > 740)):
+		Global.no_renderitzat[str(self.name)] = global_position
 		queue_free()
 		
 func change_dir():

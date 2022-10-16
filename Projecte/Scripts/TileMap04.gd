@@ -1,7 +1,7 @@
 extends Node2D
 
-var altura := 10
-var amplada := 10
+var altura := 100
+var amplada := 100
 
 func _ready():
 	for x in amplada:
@@ -10,4 +10,4 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("4"):
-		queue_free()
+		queue_free()s

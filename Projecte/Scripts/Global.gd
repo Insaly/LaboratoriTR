@@ -23,5 +23,4 @@ func change_dir():
 		no_renderitzat[entitat][1] += (dir * speed)[1]
 		
 func _timeout():
-	print("Canvi de direcció")
 	change_dir()
