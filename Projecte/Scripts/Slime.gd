@@ -12,7 +12,7 @@ func _ready():
 func _process(delta):
 	vel = move_and_slide(dir * speed, Vector2.UP)
 	
-	if ((self.global_position.x < 775 or self.global_position.x > 1175) or (self.global_position.y < 340 or self.global_position.y > 740)):
+	if ((self.global_position.x < 0 or self.global_position.x > 1920) or (self.global_position.y < 0 or self.global_position.y > 1080)):
 		Global.no_renderitzat[str(self.name)] = global_position
 		queue_free()
 		
