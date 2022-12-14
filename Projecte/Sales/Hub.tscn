@@ -13,29 +13,37 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -80.0
-margin_top = -170.0
-margin_right = -39.0
-margin_bottom = -102.0
+margin_left = -434.0
+margin_top = -206.0
+margin_right = -215.0
+margin_bottom = -74.0
 rect_scale = Vector2( 4, 4 )
 theme = ExtResource( 2 )
 
 [node name="Sala1" type="Button" parent="VBoxContainer"]
-margin_right = 41.0
+margin_right = 219.0
 margin_bottom = 20.0
-text = "Sala 1"
+text = "Experiment 1 | Default"
+
+[node name="Sala1O" type="Button" parent="VBoxContainer"]
+margin_top = 24.0
+margin_right = 219.0
+margin_bottom = 44.0
+text = "Experiment 1 | Optimitzat"
 
 [node name="Sala2" type="Button" parent="VBoxContainer"]
-margin_top = 24.0
-margin_right = 41.0
-margin_bottom = 44.0
-text = "Sala 2"
-
-[node name="Sala3" type="Button" parent="VBoxContainer"]
 margin_top = 48.0
-margin_right = 41.0
+margin_right = 219.0
 margin_bottom = 68.0
-text = "Sala 3"
+text = "Experiment 2 | Default"
+
+[node name="Sala2O" type="Button" parent="VBoxContainer"]
+margin_top = 72.0
+margin_right = 219.0
+margin_bottom = 92.0
+text = "Experiment 2 | Optimitzat"
 
 [connection signal="pressed" from="VBoxContainer/Sala1" to="." method="_on_Sala1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Sala1O" to="." method="_on_Sala1O_pressed"]
 [connection signal="pressed" from="VBoxContainer/Sala2" to="." method="_on_Sala2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Sala2O" to="." method="_on_Sala2O_pressed"]

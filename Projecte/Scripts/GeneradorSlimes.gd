@@ -1,7 +1,7 @@
 extends Area2D
 
 const Slime = preload("res://Entitats/Slime.tscn")
-var nombre_entitats = 4000
+var nombre_entitats = 100
 var entitats_generades = 0
 
 func _ready():
@@ -16,7 +16,7 @@ func _process(delta):
 		Subjecte.position = $Position2D.position
 	
 	for entitat in Global.no_renderitzat:
-		if (0 < Global.no_renderitzat[entitat][0] and Global.no_renderitzat[entitat][0] < 1920) and (0 < Global.no_renderitzat[entitat][1] and Global.no_renderitzat[entitat][1] < 1080):
+		if (760 < Global.no_renderitzat[entitat][0] and Global.no_renderitzat[entitat][0] < 1170) and (340 < Global.no_renderitzat[entitat][1] and Global.no_renderitzat[entitat][1] < 740):
 			var Subjecte = Slime.instance()
 			Subjecte.set_name(entitat)
 			add_child(Subjecte)
